@@ -1,0 +1,15 @@
+<%-include("partials/header")-%>
+
+<form class="" action="/" method="post">
+  <h1 name="Greeting">Hello</h1>
+  <p> <%=info%> </p>
+
+  <% newPost.forEach(function(post){ %>
+   <h2><%=post.pubTitle%></h2>
+   <p><%=post.pubText.substring(0,100)+" ... "%>
+     <a href="/post/<%=post.pubTitle%>">Read More </a>
+   </p>
+  <% }) %>
+
+</form>
+<%-include("partials/footer")-%>
